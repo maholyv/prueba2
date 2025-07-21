@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Eventos HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="onPageLoad()" onunload="onPageUnload()">
+    <h1>Manejo de Eventos HTML y JavaScript</h1>
+
+    <h2>1. Cargar y Descargar</h2>
+    <p id="loadMessage"></p>
+
+    <h2>2. Evento Abort y Error</h2>
+    <object id="testObject" data="invalid-url" width="300" height="200" onerror="onObjectError()" onabort="onObjectAbort()">
+        <p>Tu navegador no soporta este objeto.</p>
+    </object>
+
+    <h2>3. Input y Select</h2>
+    <input type="text" id="textInput" placeholder="Escribe algo..." onfocus="onInputFocus()" onblur="onInputBlur()" onchange="onInputChange()" />
+    <textarea id="textArea" placeholder="Escribe algo más..." onselect="onTextSelect()"></textarea>
+
+    <h2>4. Formulario</h2>
+    <form id="myForm" onsubmit="onFormSubmit(event)" onreset="onFormReset()">
+        <input type="text" placeholder="Nombre" required />
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Restablecer" />
+    </form>
+
+    <h2>5. Eventos de Ventana</h2>
+    <div style="height: 800px; overflow: auto;" onscroll="onScroll()">
+        <p>Desplázate por este área para activar el evento onscroll.</p>
+        <div style="height: 1500px;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
