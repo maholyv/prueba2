@@ -10,7 +10,7 @@ function onPageUnload() {
 
 // Evento onerror y onabort
 function onObjectError() {
-    alert('Ha ocurrido un error al cargar el objeto.');
+    alert('Hola!, parece que ha ocurrido un error al cargar el objeto. (CAMBIO)');
 }
 
 function onObjectAbort() {
